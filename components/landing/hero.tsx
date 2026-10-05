@@ -1,5 +1,6 @@
 import { CtaButton } from './cta-button'
 import { EbookMockup } from './ebook-mockup'
+import { HeroPortraits } from './hero-portraits'
 
 export function Hero() {
   return (
@@ -10,7 +11,8 @@ export function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-8 sm:px-8 sm:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-20">
         <div className="flex flex-col">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose">
+          <HeroPortraits />
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-rose">
             The $9 Korean-inspired beauty guide
           </p>
           <h1
