@@ -1,3 +1,4 @@
+import { PRODUCT_PRICE } from '@/lib/checkout'
 import { CheckoutCTA } from './checkout-cta'
 import { TrustIndicators } from './trust-indicators'
 
@@ -19,7 +20,7 @@ export function PurchaseSection() {
 
       <div className="mt-6 flex items-baseline justify-between border-y border-border py-4 text-sm">
         <span>The Seoul Glow Code — Digital Ebook</span>
-        <span className="font-serif text-2xl font-semibold leading-none">$9</span>
+        <span className="font-serif text-2xl font-semibold leading-none">{PRODUCT_PRICE}</span>
       </div>
 
       <CheckoutCTA className="mt-6" />

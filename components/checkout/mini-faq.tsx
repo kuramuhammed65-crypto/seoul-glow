@@ -1,4 +1,5 @@
 import { Plus } from 'lucide-react'
+import { PRODUCT_PRICE } from '@/lib/checkout'
 
 const faqs = [
   {
@@ -9,7 +10,7 @@ const faqs = [
     q: 'Can I read it on my phone?',
     a: 'Yes. The ebook is designed to be easy to read on phones, tablets and computers.',
   },
-  { q: 'How much does it cost?', a: 'The ebook is a one-time $9 purchase.' },
+  { q: 'How much does it cost?', a: `The ebook is a one-time ${PRODUCT_PRICE} purchase.` },
   {
     q: 'When will I receive it?',
     a: "You'll receive access after your payment is successfully completed.",
