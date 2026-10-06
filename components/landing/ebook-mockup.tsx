@@ -5,14 +5,20 @@ type EbookMockupProps = {
   priority?: boolean
   className?: string
   sizes?: string
+  showPriceBadge?: boolean
 }
 
-export function EbookMockup({ priority = false, className, sizes = '(min-width: 1024px) 420px, 80vw' }: EbookMockupProps) {
+export function EbookMockup({
+  priority = false,
+  className,
+  sizes = '(min-width: 1024px) 340px, 70vw',
+  showPriceBadge = true,
+}: EbookMockupProps) {
   return (
-    <figure className={cn('@container relative aspect-[3/4] w-full', className)}>
+    <figure className={cn('relative aspect-[937/1678] w-full', className)}>
       <div className="absolute inset-0 overflow-hidden rounded-l-sm rounded-r-lg bg-card shadow-[0_30px_60px_-25px_oklch(0.25_0.022_262/0.5),0_12px_24px_-12px_oklch(0.25_0.022_262/0.25)]">
         <Image
-          src="/images/cover-art.png"
+          src="/images/book-cover.png"
           alt=""
           fill
           priority={priority}
@@ -20,31 +26,27 @@ export function EbookMockup({ priority = false, className, sizes = '(min-width: 
           className="object-cover"
         />
 
-        {/* the cover art's photo starts ~39cqw down; keep all type above that line */}
-        <div className="absolute inset-x-0 top-0 flex flex-col items-center px-[8%] pt-[6cqw] text-center">
-          <p className="text-[2.5cqw] font-semibold uppercase tracking-[0.28em] text-rose">
-            From grandmother to daughter
-          </p>
-          <p className="mt-[2cqw] font-serif text-[10.5cqw] font-semibold leading-[0.92] tracking-tight text-foreground">
-            THE SEOUL
-            <br />
-            GLOW CODE
-          </p>
-          <p className="mt-[2.5cqw] text-[2.8cqw] font-medium uppercase tracking-[0.2em] text-foreground/80">
-            24 Korean-Inspired Beauty Rituals
-          </p>
-        </div>
-
         {/* spine shading + inner edge so the cover reads as a physical book */}
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[5%] bg-gradient-to-r from-black/15 via-white/20 to-transparent"
+          className="absolute inset-y-0 left-0 w-[5%] bg-gradient-to-r from-black/20 via-white/25 to-transparent"
         />
         <div aria-hidden="true" className="absolute inset-0 rounded-r-lg ring-1 ring-inset ring-black/5" />
       </div>
+
+      {showPriceBadge && (
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-5 -right-3 flex size-20 rotate-6 flex-col items-center justify-center rounded-full bg-rose text-primary-foreground shadow-lg sm:-right-6 sm:size-24"
+        >
+          <span className="font-serif text-3xl font-semibold leading-none sm:text-4xl">$9</span>
+          <span className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.15em]">Ebook</span>
+        </div>
+      )}
+
       <figcaption className="sr-only">
-        The Seoul Glow Code ebook cover: 24 Korean-Inspired Beauty Rituals, featuring rice, honey, green tea and camellia
-        blossoms.
+        The Seoul Glow Code ebook cover: Korean-inspired beauty rituals for dark spots, uneven tone, dull skin and dry
+        skin. $9 ebook.
       </figcaption>
     </figure>
   )

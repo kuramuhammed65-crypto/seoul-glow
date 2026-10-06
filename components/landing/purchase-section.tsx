@@ -16,8 +16,8 @@ export function PurchaseSection() {
             </h2>
           </div>
 
-          <div className="reveal mx-auto w-full max-w-[16rem] sm:max-w-xs lg:row-span-2 lg:max-w-sm">
-            <EbookMockup sizes="(min-width: 1024px) 384px, 256px" />
+          <div className="reveal mx-auto w-full max-w-[14rem] sm:max-w-[16rem] lg:row-span-2 lg:max-w-[19rem]">
+            <EbookMockup sizes="(min-width: 1024px) 304px, (min-width: 640px) 256px, 224px" />
           </div>
 
           <div className="reveal flex flex-col items-center text-center lg:items-start lg:text-left">

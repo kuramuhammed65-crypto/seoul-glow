@@ -115,8 +115,8 @@ export function EbookPreview() {
       <div className="mx-auto max-w-6xl py-20 sm:py-28">
         <div className="px-5 sm:px-8">
           <SectionHeading id="preview-title" eyebrow="Inside the ebook" title="TAKE A CLOSER LOOK INSIDE" className="reveal" />
-          <div className="reveal mx-auto mt-12 w-full max-w-[20rem] sm:max-w-sm">
-            <EbookMockup sizes="(min-width: 640px) 384px, 320px" />
+          <div className="reveal mx-auto mt-12 w-full max-w-[15rem] sm:max-w-[18rem]">
+            <EbookMockup sizes="(min-width: 640px) 288px, 240px" />
           </div>
         </div>
 

@@ -38,13 +38,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[19rem] sm:max-w-sm lg:max-w-[25rem]">
-          <EbookMockup priority sizes="(min-width: 1024px) 400px, 300px" />
-          <div className="absolute -bottom-5 -right-3 flex size-20 rotate-6 flex-col items-center justify-center rounded-full bg-rose text-primary-foreground shadow-lg sm:-right-6 sm:size-24">
-            <span className="font-serif text-3xl font-semibold leading-none sm:text-4xl">$9</span>
-            <span className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.15em]">Ebook</span>
+          <div className="relative mx-auto w-full max-w-[15rem] sm:max-w-[18rem] lg:max-w-[21rem]">
+            <EbookMockup priority sizes="(min-width: 1024px) 336px, (min-width: 640px) 288px, 240px" />
           </div>
-        </div>
       </div>
     </section>
   )
