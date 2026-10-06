@@ -1,9 +1,10 @@
 import { Download, Lock, Smartphone, Tag } from 'lucide-react'
+import { PRODUCT_PRICE } from '@/lib/checkout'
 
 const items = [
   { icon: Download, label: 'Instant digital delivery' },
   { icon: Smartphone, label: 'Read on phone, tablet or computer' },
-  { icon: Tag, label: 'One-time payment — $9' },
+  { icon: Tag, label: `One-time payment — ${PRODUCT_PRICE}` },
   { icon: Lock, label: 'Secure checkout' },
 ]
 

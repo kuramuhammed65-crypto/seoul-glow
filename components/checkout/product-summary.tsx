@@ -1,4 +1,5 @@
 import { EbookMockup } from '@/components/landing/ebook-mockup'
+import { PRODUCT_PRICE } from '@/lib/checkout'
 
 export function ProductSummary() {
   return (
@@ -18,7 +19,7 @@ export function ProductSummary() {
         <p className="mt-1 text-sm leading-snug text-muted-foreground lg:text-base">
           24 Korean-Inspired Beauty Rituals
         </p>
-        <p className="mt-3 font-serif text-3xl font-semibold leading-none lg:text-4xl">$9</p>
+        <p className="mt-3 font-serif text-3xl font-semibold leading-none lg:text-4xl">{PRODUCT_PRICE}</p>
         <p className="mt-2 text-xs leading-snug text-muted-foreground lg:text-sm">
           Instant digital access after payment.
         </p>

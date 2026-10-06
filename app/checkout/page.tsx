@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { CheckoutCTA } from '@/components/checkout/checkout-cta'
 import { CheckoutHeader } from '@/components/checkout/checkout-header'
 import { Footer } from '@/components/checkout/footer'
@@ -40,6 +41,7 @@ export default function CheckoutPage() {
         </div>
       </main>
       <Footer />
+      <Script src="https://gumroad.com/js/gumroad.js" strategy="afterInteractive" />
     </>
   )
 }
