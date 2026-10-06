@@ -6,6 +6,7 @@ type EbookMockupProps = {
   className?: string
   sizes?: string
   showPriceBadge?: boolean
+  badgeSize?: 'md' | 'sm'
 }
 
 export function EbookMockup({
@@ -13,6 +14,7 @@ export function EbookMockup({
   className,
   sizes = '(min-width: 1024px) 340px, 70vw',
   showPriceBadge = true,
+  badgeSize = 'md',
 }: EbookMockupProps) {
   return (
     <figure className={cn('relative aspect-[937/1678] w-full', className)}>
@@ -37,10 +39,30 @@ export function EbookMockup({
       {showPriceBadge && (
         <div
           aria-hidden="true"
-          className="absolute -bottom-5 -right-3 flex size-20 rotate-6 flex-col items-center justify-center rounded-full bg-rose text-primary-foreground shadow-lg sm:-right-6 sm:size-24"
+          className={cn(
+            'absolute flex rotate-6 flex-col items-center justify-center rounded-full bg-rose text-primary-foreground shadow-lg',
+            badgeSize === 'md' && '-bottom-5 -right-3 size-20 sm:-right-6 sm:size-24',
+            badgeSize === 'sm' && '-bottom-3 -right-3 size-14 lg:-bottom-5 lg:-right-6 lg:size-24',
+          )}
         >
-          <span className="font-serif text-3xl font-semibold leading-none sm:text-4xl">$9</span>
-          <span className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.15em]">Ebook</span>
+          <span
+            className={cn(
+              'font-serif font-semibold leading-none',
+              badgeSize === 'md' && 'text-3xl sm:text-4xl',
+              badgeSize === 'sm' && 'text-2xl lg:text-4xl',
+            )}
+          >
+            $9
+          </span>
+          <span
+            className={cn(
+              'font-semibold uppercase',
+              badgeSize === 'md' && 'mt-0.5 text-[0.6rem] tracking-[0.15em]',
+              badgeSize === 'sm' && 'text-[0.5rem] tracking-[0.12em] lg:mt-0.5 lg:text-[0.6rem] lg:tracking-[0.15em]',
+            )}
+          >
+            Ebook
+          </span>
         </div>
       )}
 

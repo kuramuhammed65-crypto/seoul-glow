@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-export const CHECKOUT_URL = '/checkout'
+export const CHECKOUT_PAGE_PATH = '/checkout'
 export const PRIMARY_CTA_LABEL = 'GET THE SEOUL GLOW CODE — $9'
 
 type CtaButtonProps = {
@@ -22,7 +22,7 @@ export function CtaButton({
 }: CtaButtonProps) {
   return (
     <Link
-      href={CHECKOUT_URL}
+      href={CHECKOUT_PAGE_PATH}
       className={cn(
         'group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-sans font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose active:scale-[0.98]',
         size === 'lg' &&
