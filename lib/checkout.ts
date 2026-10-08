@@ -1,6 +1,6 @@
 // Replace this one value to change where every purchase button sends the customer.
-// No "?wanted=true": Gumroad's overlay script skips links with that parameter and does a full redirect instead.
-export const CHECKOUT_URL = 'https://influencify30.gumroad.com/l/Kskin'
+// "?wanted=true" opens Gumroad's payment form directly, skipping the product page.
+export const CHECKOUT_URL = 'https://influencify30.gumroad.com/l/Kskin?wanted=true'
 
 export const PRODUCT_PRICE = '$9'
 
