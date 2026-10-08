@@ -4,4 +4,4 @@ export const CHECKOUT_URL = 'https://influencify30.gumroad.com/l/Kskin?wanted=tr
 
 export const PRODUCT_PRICE = '$9'
 
-export const CHECKOUT_CTA_LABEL = `GET THE SEOUL GLOW CODE — ${PRODUCT_PRICE}`
+export const CHECKOUT_CTA_LABEL = `CONTINUE TO PAYMENT — ${PRODUCT_PRICE}`
