@@ -2,7 +2,34 @@ import { CtaButton } from './cta-button'
 import { EbookMockup } from './ebook-mockup'
 import { HeroPortraits } from './hero-portraits'
 
-export function Hero() {
+export type HeroVariant = 'general' | 'dull' | 'dark-spots' | 'dry-skin'
+
+const heroCopy: Record<HeroVariant, { headline: string; subheadline: string }> = {
+  general: {
+    headline: 'Skin that looks tired, dull, or uneven?',
+    subheadline:
+      '24 Korean-inspired skin rituals sorted by your skin problem. Exact amounts, simple steps, and a 7-day routine so you know what to do each morning.',
+  },
+  dull: {
+    headline: 'Dull, tired skin that no cream fixes?',
+    subheadline:
+      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dull, tired-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+  },
+  'dark-spots': {
+    headline: 'Tired of covering dark spots with makeup?',
+    subheadline:
+      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dark spots and uneven-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+  },
+  'dry-skin': {
+    headline: 'Dry, rough skin that moisturizer never fixes?',
+    subheadline:
+      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dry, rough-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+  },
+}
+
+export function Hero({ variant = 'general' }: { variant?: HeroVariant }) {
+  const copy = heroCopy[variant]
+
   return (
     <section id="hero" aria-labelledby="hero-title" className="relative overflow-hidden">
       <div
@@ -19,14 +46,10 @@ export function Hero() {
             id="hero-title"
             className="mt-4 font-serif text-[3.1rem] font-semibold leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-[5.25rem]"
           >
-            STUBBORN DARK SPOTS?
+            {copy.headline}
           </h1>
-          <p className="mt-5 font-serif text-[1.45rem] font-medium leading-snug text-foreground/90 text-pretty sm:text-3xl">
-            Tired of seeing those dark marks every time you look in the mirror?
-          </p>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground text-pretty sm:text-lg">
-            Discover 24 Korean-inspired beauty rituals organized around the skin concerns women struggle with most —
-            dark spots, uneven-looking complexion, dullness and dryness.
+          <p className="mt-5 max-w-xl font-serif text-[1.45rem] font-medium leading-snug text-foreground/90 text-pretty sm:text-3xl">
+            {copy.subheadline}
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:items-start">

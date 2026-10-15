@@ -4,7 +4,7 @@ import { Faq } from '@/components/landing/faq'
 import { FeatureChecklist } from '@/components/landing/feature-checklist'
 import { FinalCta } from '@/components/landing/final-cta'
 import { GrandmotherStory } from '@/components/landing/grandmother-story'
-import { Hero } from '@/components/landing/hero'
+import { Hero, type HeroVariant } from '@/components/landing/hero'
 import { PainSection } from '@/components/landing/pain-section'
 import { ProcessSteps } from '@/components/landing/process-steps'
 import { PurchaseSection } from '@/components/landing/purchase-section'
@@ -14,12 +14,12 @@ import { SiteHeader } from '@/components/landing/site-header'
 import { StickyMobileCta } from '@/components/landing/sticky-mobile-cta'
 import { WhoItsFor } from '@/components/landing/who-its-for'
 
-export default function Page() {
+export function LandingPage({ heroVariant = 'general' }: { heroVariant?: HeroVariant }) {
   return (
     <>
       <SiteHeader />
       <main>
-        <Hero />
+        <Hero variant={heroVariant} />
         <PainSection />
         <ConcernCards />
         <EbookPreview />
@@ -37,3 +37,8 @@ export default function Page() {
     </>
   )
 }
+
+export default function Page() {
+  return <LandingPage />
+}
+
