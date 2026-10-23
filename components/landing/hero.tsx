@@ -6,24 +6,24 @@ export type HeroVariant = 'general' | 'dull' | 'dark-spots' | 'dry-skin'
 
 const heroCopy: Record<HeroVariant, { headline: string; subheadline: string }> = {
   general: {
-    headline: 'Skin that looks tired, dull, or uneven?',
+    headline: 'Dark marks, dullness, or dry-looking skin?',
     subheadline:
-      '24 Korean-inspired skin rituals sorted by your skin problem. Exact amounts, simple steps, and a 7-day routine so you know what to do each morning.',
+      'Discover 24 Korean-inspired beauty rituals organized by your skin concern, with exact ingredient measurements, simple step-by-step instructions, and a 7-day routine to help you get started.',
   },
   dull: {
-    headline: 'Dull, tired skin that no cream fixes?',
+    headline: 'Dark marks, dullness, or dry-looking skin?',
     subheadline:
-      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dull, tired-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+      'Discover 24 Korean-inspired beauty rituals organized by your skin concern, with exact ingredient measurements, simple step-by-step instructions, and a 7-day routine to help you get started.',
   },
   'dark-spots': {
-    headline: 'Tired of covering dark spots with makeup?',
+    headline: 'Dark marks, dullness, or dry-looking skin?',
     subheadline:
-      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dark spots and uneven-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+      'Discover 24 Korean-inspired beauty rituals organized by your skin concern, with exact ingredient measurements, simple step-by-step instructions, and a 7-day routine to help you get started.',
   },
   'dry-skin': {
-    headline: 'Dry, rough skin that moisturizer never fixes?',
+    headline: 'Dark marks, dullness, or dry-looking skin?',
     subheadline:
-      '24 Korean-inspired skin rituals sorted by your skin problem, with a section just for dry, rough-looking skin. Exact amounts, simple steps, and a 7-day routine.',
+      'Discover 24 Korean-inspired beauty rituals organized by your skin concern, with exact ingredient measurements, simple step-by-step instructions, and a 7-day routine to help you get started.',
   },
 }
 

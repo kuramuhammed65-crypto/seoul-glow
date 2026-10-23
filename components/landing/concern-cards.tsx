@@ -23,13 +23,6 @@ const concerns = [
     image: '/images/concern-dry.png',
     alt: 'Rolled oats in a ceramic bowl next to a jar of honey',
   },
-  {
-    number: '04',
-    title: 'Your 7-Day Seoul Glow Routine',
-    description: 'A simple routine showing you what to use and when.',
-    image: '/images/concern-routine.png',
-    alt: 'Seven small dishes of natural ingredients arranged in a row',
-  },
 ]
 
 export function ConcernCards() {
@@ -38,7 +31,7 @@ export function ConcernCards() {
       <SectionHeading
         id="concerns-title"
         eyebrow="What's inside"
-        title="ONE BOOK. FOUR SKIN CONCERNS."
+        title="ONE BOOK. THREE SKIN CONCERNS."
         subtitle="Find the section that matches what you're actually trying to improve."
         className="reveal"
       />

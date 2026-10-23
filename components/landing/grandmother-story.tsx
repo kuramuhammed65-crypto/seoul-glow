@@ -19,12 +19,11 @@ export function GrandmotherStory() {
             id="story-title"
             className="font-serif text-[1.85rem] font-medium leading-[1.12] tracking-tight text-balance sm:text-[2.6rem]"
           >
-            INSPIRED BY THE BEAUTY RITUALS GRANDMA NEVER NEEDED A 12-STEP ROUTINE FOR.
+            INSPIRED BY TRADITIONAL KOREAN BEAUTY RITUALS
           </h2>
           <span aria-hidden="true" className="h-px w-12 bg-rose" />
           <p className="max-w-md text-base leading-relaxed text-muted-foreground text-pretty sm:text-lg">
-            The Seoul Glow Code brings together traditional-inspired Korean beauty rituals built around simple
-            ingredients and generations of beauty wisdom—reimagined in a simple guide you can actually follow at home.
+            The Seoul Glow Code brings together Korean-inspired, ingredient-based beauty rituals in a simple guide designed for modern routines.
           </p>
         </div>
       </div>
