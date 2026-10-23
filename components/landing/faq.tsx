@@ -13,6 +13,10 @@ const faqs = [
     a: 'No. These are traditional-inspired cosmetic beauty rituals. They are not intended to diagnose, treat or cure medical skin conditions.',
   },
   { q: 'How quickly do I receive it?', a: 'Immediately after successful payment.' },
+  {
+    q: 'What is your refund policy?',
+    a: "7-Day Refund Policy: If you're not satisfied with The Seoul Glow Code, you can request a refund within 7 days of purchase by contacting us through the website's Contact page and providing your order details. We'll review your request and respond as soon as possible.",
+  },
 ]
 
 export function Faq() {
